@@ -3,17 +3,29 @@
 
 @import "{{ site.theme }}";
 
-// Target the page width directly
-.page-header, .main-content {
-  max-width: 1200px !important;
-  margin-left: auto !important;
-  margin-right: auto !important;
-  padding-left: 2rem !important;
-  padding-right: 2rem !important;
-}
-
-// Or if there's a specific wrapper
+// Target the main wrapper that contains all content
 .wrapper {
   max-width: 1200px !important;
   width: 90% !important;
+  margin: 0 auto !important;
+}
+
+// Specifically target the content area
+.main-content {
+  max-width: none !important;
+  width: 100% !important;
+}
+
+// If there's a specific content container
+.main-content h1,
+.main-content h2,
+.main-content h3,
+.main-content h4,
+.main-content h5,
+.main-content h6,
+.main-content p,
+.main-content ul,
+.main-content ol,
+.main-content table {
+  max-width: none !important;
 }
