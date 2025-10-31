@@ -3,35 +3,22 @@
 
 @import "{{ site.theme }}";
 
-/* Override the main container width */
-.wrapper {
-  max-width: 1400px !important;
-  width: 90% !important;
+/* Complete width override */
+body .wrapper {
+  max-width: 1200px !important;
+  width: 95% !important;
   margin: 0 auto !important;
+  padding: 0 20px !important;
 }
 
-/* Ensure the main content uses the full available width */
-.main-content {
-  max-width: none !important;
-}
-
-/* Specifically target the content wrapper inside main-content */
-.main-content .wrap {
+body .main-content {
   max-width: none !important;
   width: 100% !important;
+  padding: 40px 0 !important;
 }
 
-/* Make sure all content elements can use the full width */
-.main-content h1,
-.main-content h2, 
-.main-content h3,
-.main-content h4,
-.main-content h5,
-.main-content h6,
-.main-content p,
-.main-content ul,
-.main-content ol,
-.main-content div,
-.main-content pre {
+/* Remove any inner constraints */
+body .main-content > * {
   max-width: none !important;
+  width: 100% !important;
 }
