@@ -3,23 +3,28 @@
 
 @import "{{ site.theme }}";
 
-/* Remove all width constraints from wrapper */
+/* Center the entire content with equal side margins */
 .wrapper {
-  max-width: none !important;
-  width: 95% !important;
+  max-width: 1100px !important;
+  width: 90% !important;
   margin: 0 auto !important;
-  padding: 0 2.5% !important;
+  padding: 0 5% !important;
+  box-sizing: border-box !important;
 }
 
-/* Remove constraints from main content */
+/* Ensure main content uses full wrapper width */
 .main-content {
   max-width: none !important;
   width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
 }
 
-/* Remove any potential inner constraints */
-.wrap,
-.inner {
-  max-width: none !important;
-  width: 100% !important;
+/* Make sure all content elements are centered */
+body {
+  text-align: center !important;
+}
+
+.main-content {
+  text-align: left !important;
 }
