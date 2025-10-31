@@ -3,24 +3,23 @@
 
 @import "{{ site.theme }}";
 
-/* Target the specific wrapper used by Midnight theme */
+/* Remove all width constraints from wrapper */
 .wrapper {
-  max-width: 1200px !important;
-  width: 90% !important;
-}
-
-/* Override the main content area specifically */
-.main-content {
   max-width: none !important;
+  width: 95% !important;
+  margin: 0 auto !important;
+  padding: 0 2.5% !important;
 }
 
-/* Target the inner wrap that might be constraining content */
-.main-content wrap {
+/* Remove constraints from main content */
+.main-content {
   max-width: none !important;
   width: 100% !important;
 }
 
-/* Ensure all block elements use full available width */
-.main-content > * {
+/* Remove any potential inner constraints */
+.wrap,
+.inner {
   max-width: none !important;
+  width: 100% !important;
 }
