@@ -1,0 +1,24 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+// Increase the main content area
+.main-content {
+  max-width: 1200px !important;
+  width: 90% !important;
+  margin: 0 auto !important;
+}
+
+// Reduce side padding on larger screens
+@media screen and (min-width: 768px) {
+  .main-content {
+    padding: 2rem 4rem !important;
+  }
+}
+
+// Adjust the overall container
+.container {
+  max-width: 1400px !important;
+  width: 95% !important;
+}
