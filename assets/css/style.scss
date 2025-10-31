@@ -3,22 +3,27 @@
 
 @import "{{ site.theme }}";
 
-// Target the main wrapper that contains all content
+/* Override the main container width */
 .wrapper {
   max-width: 1200px !important;
   width: 90% !important;
   margin: 0 auto !important;
 }
 
-// Specifically target the content area
+/* Ensure the main content uses the full available width */
 .main-content {
+  max-width: none !important;
+}
+
+/* Specifically target the content wrapper inside main-content */
+.main-content .wrap {
   max-width: none !important;
   width: 100% !important;
 }
 
-// If there's a specific content container
+/* Make sure all content elements can use the full width */
 .main-content h1,
-.main-content h2,
+.main-content h2, 
 .main-content h3,
 .main-content h4,
 .main-content h5,
@@ -26,6 +31,7 @@
 .main-content p,
 .main-content ul,
 .main-content ol,
-.main-content table {
+.main-content div,
+.main-content pre {
   max-width: none !important;
 }
